@@ -1,0 +1,197 @@
+  918  git remote set-url origin git@github.com:ThePigeonKing/SOSS_LAB.git
+  919  git remote -v
+  920  git push
+  921  clear
+  922  sudo apt install asciinema
+  923  clear
+  924  ls
+  925  asciinema rec
+  926  ls
+  927  cd lab1
+  928  touch some_file
+  929  vim some_file
+  930  asciinema auth
+  931  asciinema play /tmp/tmpjl8w41_l-ascii.cast
+  932  clear
+  933  ls
+  934  cd ..
+  935  ls
+  936  clear
+  937  cd
+  938  clear
+  939  asciinema --help
+  940  asciinemma rec -i 5 demo.cast
+  941  asciinema rec -i 5 demo.cast
+  942  mkdir Dev
+  943  cd Dev
+  944  lolcat ~/.ssh
+  945  ls
+  946  rm demo.cast
+  947  clear
+  948  ls
+  949  cd Documents
+  950  ls
+  951  cd SOSS_LAB
+  952  ls
+  953  clear
+  954  ls
+  955  cd lab1
+  956  ls
+  957  clear
+  958  asciinema rec -h
+  959  asciinema rec lab1.cast
+  960  mkdir tmp
+  961  cd tmp
+  962  clear
+  963  whoami
+  964  echo "Hello World\n
+  965  echo "Hello World"\n
+  966  clear
+  967  date
+  968  cal
+  969  man cal
+  970  cal -A2
+  971  history
+  972  clear
+  973  ls
+  974  clear
+  975  mv lab1_part1.cast
+  976  mv lab1.cast lab1_part1.cast
+  977  ls
+  978  clear
+  979  history
+  980  history -h
+  981  history --help
+  982  history 50
+  983  ls
+  984  vim lab1_part.txt
+  985  clear
+  986  asciinema rec lab1_part23.cast
+  987  pwd
+  988  cd /
+  989  cd ..
+  990  pwd
+  991  ls
+  992  ls /var
+  993  cd ~
+  994  cd
+  995  cd ..
+  996  ls
+  997  pwd
+  998  ls -la
+  999  cd
+ 1000  cd Documents/SOSS_LAB/lab1/tmp
+ 1001  mkdir fruits
+ 1002  cd
+ 1003  mkdir fruits
+ 1004  mkdir ~/animals
+ 1005  ls
+ 1006  touch /tmp/temp
+ 1007  cd fruits
+ 1008  touch apple
+ 1009  touch banana
+ 1010  touch pineaple
+ 1011  touch lion
+ 1012  touch ~/animals/cat.txt ~/animals/dog.txt ~/animals/elephant.txt
+ 1013  ls ~/animals
+ 1014  ls -la ~/animals
+ 1015  ls -la
+ 1016  file apple
+ 1017  Sep 16 16:12
+ 1018  ls b*
+ 1019  ls a*
+ 1020  ls [bi]*
+ 1021  cp /etc/passwd ~
+ 1022  cat /etc/issue
+ 1023  cat /etc/issue > apple
+ 1024  cat apple
+ 1025  mv lion ~/animals
+ 1026  ls
+ 1027  mv pineaple pineapple
+ 1028  ls
+ 1029  wc /etc/passwd
+ 1030  wc /etc/passwd -l
+ 1031  47
+ 1032  cd
+ 1033  ln -s /etc/passwd passwd_link
+ 1034  ls
+ 1035  ln .bash_history history_hard
+ 1036  ls -l ~/.bash_history
+ 1037  ls -l ~/.gitconfig
+ 1038  rm fruits/apple
+ 1039  mkdir rmme
+ 1040  rmdir rmme
+ 1041  rmdir fruits
+ 1042  rm -rf fruits
+ 1043  cat /etc/passwd /var/log/boot.log
+ 1044  cp /etc/init.d/ ~
+ 1045  cp -r /etc/init.d/ ~
+ 1046  ls
+ 1047  rm -rf init.d
+ 1048  ls
+ 1049  clear
+ 1050  cut -d: -f1 /etc/passwd | ???
+ 1051  cut -d: -f1 /etc/passwd | cat
+ 1052  clear
+ 1053  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+ 1054  clear
+ 1055  man cut
+ 1056  man column
+ 1057  man less
+ 1058  cat /etc/passwd
+ 1059  cut -d: -f1,2,3,4 /etc/passwd | column -ts: | less
+ 1060  cut -d: -f1,3 /etc/passwd | column -ts: | less
+ 1061  grep :/bin/bash /etc/passwd | wc -l
+ 1062  cat /etc/passwd
+ 1063  grep :/bin/bash /etc/passwd | column -ts | less
+ 1064  man column
+ 1065  grep :/bin/bash /etc/passwd
+ 1066  grep :/bin/bash /etc/passwd | awk '{print $1}'
+ 1067  grep :/bin/bash /etc/passwd | awk -F : '{print $1}'
+ 1068  rpm -qa --qf '%{NAME}: %{SIZE}\n'
+ 1069  apt list --installed
+ 1070  dpkg-query -Wf '${Installed-Size}\t${Package}\n'
+ 1071  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | head -n 25
+ 1072  man sort
+ 1073  dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -nr | head -n 25
+ 1074  top
+ 1075  top -b -n1
+ 1076  clear
+ 1077  top -b -n1
+ 1078  top -b -n12
+ 1079  top -b -n | sort -k12
+ 1080  top -b -n1 | sort -k12
+ 1081  top -b -n1 | tail -n+8 | cut -c7-  | tr -s ' ' '\t' | cut -f11,5\n
+ 1082  cat /etc/passwd
+ 1083  cat /etc/passwd | cut
+ 1084  cat /etc/passwd | sort -t ":" -n1
+ 1085  cat /etc/passwd | sort -t ":" -k1
+ 1086  cat /etc/passwd | sort -t ":" -k1 | tr ":" " "
+ 1087  clear
+ 1088* awk
+ 1089  cat /etc/passwd | tr ":" " " | awk '{ print $1, $2}'
+ 1090  cat /etc/passwd
+ 1091  cat /etc/passwd | tr ":" " " | awk '{ print $1, $6}'
+ 1092  cat /etc/passwd | tr ":" " " | awk '{ print $1, $6}' | column -t -s " "
+ 1093  cat /etc/passwd | tr ":" " " | awk '{ print $1, $6}' | column -t -s " " | sort
+ 1094  clear
+ 1095  cd /usr/share/doc/git-*
+ 1096  ls
+ 1097  ls ..
+ 1098  clear
+ 1099  ls
+ 1100  cd ~/Documents/SOSS_LAB
+ 1101  ping ya.ru
+ 1102  curl wttr.in
+ 1103  hostname -I
+ 1104  curl ifconfig.me
+ 1105  cd lab1
+ 1106  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+ 1107  less README-ru.md
+ 1108  sudo od
+ 1109  sudo id
+ 1110  cat /var/log/messages
+ 1111  su
+ 1112  id
+ 1113  su
+ 1114  sudo su
