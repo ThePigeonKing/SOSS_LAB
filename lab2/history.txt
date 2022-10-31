@@ -1,0 +1,76 @@
+ 1967* whoami
+ 1968* mkdir test
+ 1969* cd test
+ 1970* touch file
+ 1971* ls -la
+ 1972* ll file
+ 1973* chmod 000 file
+ 1974* ll file
+ 1975* echo "test"
+ 1976* echo "test" > file
+ 1977* cat file
+ 1978* chmod u=w file
+ 1979* ll file
+ 1980* echo "test" > file
+ 1981* cat file
+ 1982* chmod g=r file
+ 1983* ll file
+ 1984* cat file
+ 1985* chmod u=r file
+ 1986* cat file
+ 1987* mkdir dir
+ 1988* touch dir/new_file
+ 1989* cd dir
+ 1990* ls
+ 1991* echo "file 2" > new_file
+ 1992* cd ..
+ 1993* ls dir
+ 1994* ll dir
+ 1995* chmod u-x dir
+ 1996* ll dir
+ 1997* ls dir
+ 1998* chown --help
+ 1999* chown root file
+ 2000* chown :root file
+ 2003* umask
+ 2027* (umask 0077; touch file1)
+ 2028* ll file1
+ 2029* (umask 0001; touch nonprivate)
+ 2030* ll nonprivate
+ 2031* (umask 0001; touch file2)
+ 2032* ll file2
+ 2033* clear
+ 2034* su
+ 2035* sudo apt update
+ 2036* clear
+ 2037* sudo chown root file
+ 2038* ll file
+ 2039* sudo whoami
+ 2040* whoami
+ 2041* ls
+ 2042* sudo chown root sample1
+ 2043* ll sample1
+ 2044* sudo chown root:root sample1
+ 2045* ll sample1
+ 2046* sudo chown 0277 sample1
+ 2047* ll sample1
+ 2048* sudo chown 0222 sample1
+ 2049* ll sample1
+ 2050* sudo chmod 0277 sample1
+ 2051* ll sample1
+ 2052* sudo chmod 0100 sample1
+ 2053* ll sample1
+ 2054* sudo chmod 0400 sample1
+ 2055* ll sample1
+ 2056* cat saple1
+ 2057* cat sample1
+ 2058* chmod 0400 file
+ 2059* sudo chmod 0400 file
+ 2060* ll file
+ 2061* whoami
+ 2062* cat file
+ 2063* ll file
+ 2064* sudo chmod 0440 file
+ 2065* cat file
+ 2066* ls -lR
+ 2072  history -100 > history.txt
