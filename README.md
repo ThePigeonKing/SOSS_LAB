@@ -1,4 +1,4 @@
-# SOSS_LAB
+# SOSS_LAB, Полищук Максим, Б20-505
 
 ## (c) ThePiegonKing
 
