@@ -1,9 +1,6 @@
 #!/bin/bash
 
-while read -r line;
+while IFS='$\n' read -r line
 do
-    if [[ "$line" =~ .*"bin".* ]];
-    then
-        echo "$line" >&2;
-    fi
+	echo "$line" | grep -w bin >&2
 done

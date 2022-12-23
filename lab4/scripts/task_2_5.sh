@@ -1,11 +1,10 @@
 #!/bin/bash
 
-echo "*.txt files:";
-ls "$HOME" | grep ".txt$";
-echo;
-echo "Total size in bytes:";
+FILES=$(find ~ -type f -name "*.txt")
+echo "$FILES"
 
-find "$HOME" -maxdepth 1 -type f -name "*.txt" -exec du -cb {} + | tail -1 | cut -f 1;
-echo;
-echo "Total number of lines:";
-find "$HOME" -maxdepth 1 -type f -name "*.txt" -exec wc -l {} + | tail -1 | cut -f 3 -d" ";
+echo -ne "bytes: "
+echo $FILES | xargs du -bc 2>/dev/null | tail -1 | cut -f1
+
+echo -ne "lines: "
+echo $FILES | xargs wc -l 2>/dev/null | tail -1 | awk '{print $1}'

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls ~ | grep -E "*\.txt$" | wc -l
+find ~ -type f -name "*.txt" | wc -l
