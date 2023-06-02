@@ -1,0 +1,78 @@
+ldd /bin/login | grep pam 
+ls -l /lib64/libpam*
+ls -l /lib64/security
+vim /etc/pam.d/system-auth 
+vim /etc/pam.d/su
+sudo vim /etc/pam.d/su
+man su
+su
+sudo useradd -p 1234 user2
+su user2
+sudo grep user2 /etc/shadow
+sudo grep pd9 /etc/shadow
+sudo grep user1 /etc/shadow
+su user2
+sudo passwd -d user2
+su user2
+sudo vim /etc/pam.d/su
+su
+sudo vim /etc/pam.d/su
+su
+sudo vim /etc/pam.d/su
+useradd user1
+sudo useradd user1
+sudo useradd -G wheel
+sudo useradd -G wheel user1
+id user1
+usermod -aG wheel user1
+sudo usermod -aG wheel user1
+id user1
+su user1
+useradd -D
+su user1
+sudo grep test /etc/shadow
+sudo grep user1 /etc/shadow
+sudo passwd -d user1
+su user1
+su user1
+wget https://github.com/linux-pam/linux-pam/blob/master/examples/check_user.c
+ls
+gcc check_user.c -o check_user -lpam -lpam_misc
+sudo apt install libpam0g-dev
+sudo yum install libpam0g-dev
+yum search pam
+ls
+ll
+vim /etc/pam.d/check
+sudo vim /etc/pam.d/check
+ls
+check_user
+./check_user
+sudo ./check_user
+passwd pd9
+./check_user pd9
+sudo useradd aaa
+passwd aaa
+sudo passwd aaa
+./check_user aaa
+su aaa
+vim check_user.c
+gcc check_user.c -o check_user -lpam -lpam_misc
+./check_user
+./check_user pd9
+vim check_user.c
+su aaa
+sudo chage -E 2022 12 12
+sudo chage -E 2022-12-12
+sudo chage -E 20221212
+sudo chage -E 20221212 aaa
+su aaa
+sudo chage -E 2022-12-12 aaa
+su aaa
+./check_user aaa
+sudo passwd aaa
+sudo passwd -l aaa
+./check_user aaa
+sudo passwd -u aaa
+./check_user aaa
+su aaa
